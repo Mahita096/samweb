@@ -1,0 +1,46 @@
+	<html>
+	<head>
+
+	<h1>TAX CALCULATION</h1>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <body>
+	<table>
+	<tr>
+	 <th>Qty <input type="text" id="qty1"></th>
+	 <th>Price <input type="text" id="price1"></th>
+	 <th>Tax <input type="text" id="tax1"></th>
+       </tr>
+       <tr>
+	 <th>Amount<input type="text" id="amount1" readonly></th>
+	 <th>Tax Amount<input type="text" id="taxamount1" readonly></th>
+	 <th>Total Amount<input type="text" id="totalamount1" readonly></th>
+       </tr>
+	   <tr>
+	   <td><button id="sub">Calculation</button></td>
+	   </tr>
+	 </table>
+      
+     
+      <script>
+        $(document).ready(function(){
+          $("button").click(function(){
+            var qty=$("#qty1").val();
+            var price=$("#price1").val();
+            var tax=$("#tax1").val();
+            var amount=qty*price;
+            var taxamount=amount*(tax/100);
+            var totalamount=(amount+taxamount);
+            $("#amount1").val(amount);
+            $("#taxamount1").val(taxamount);
+            $("#totalamount1").val(totalamount);
+            
+          });
+        });
+        </script>
+      
+      
+      
+	 
+	  </body>
+	
+	</html>
