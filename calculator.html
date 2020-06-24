@@ -1,0 +1,203 @@
+<html>
+
+<head>
+
+
+
+<title> Calculator </title>
+
+
+</head>
+
+<body>
+
+<div class="container">
+
+<form name="form" id="newcal">
+
+<div class="display">
+<h2> </h2>
+
+<input type="text" placeholder="0" name="displayResult" />
+
+</div>
+
+<input type="button" onclick="myFunction()" value="C">
+
+
+<div class="row">
+
+<input type="button" name="b7" value="7" onClick="calNo(b7.value)">
+
+<input type="button" name="b8" value="8" onClick="calNo(b8.value)">
+
+<input type="button" name="b9" value="9" onClick="calNo(b9.value)">
+
+<input type="button" name="add" value="+" onClick="calNo(add.value)">
+
+</div>
+
+<div class="row">
+
+<input type="button" name="b4" value="4" onClick="calNo(b4.value)">
+
+<input type="button" name="b5" value="5" onClick="calNo(b5.value)">
+
+<input type="button" name="b6" value="6" onClick="calNo(b6.value)">
+
+<input type="button" name="sub" value="-" onClick="calNo(sub.value)">
+
+</div>
+
+<div class="row">
+
+<input type="button" name="b1" value="1" onClick="calNo(b1.value)">
+
+<input type="button" name="b2" value="2" onClick="calNo(b2.value)">
+
+<input type="button" name="b3" value="3" onClick="calNo(b3.value)">
+
+<input type="button" name="mulp" value="*" onClick="calNo(mulp.value)">
+
+</div>
+
+<div class="row">
+
+<input type="button" name="b0" value="0" onClick="calNo(b0.value)">
+
+<input type="button" name="dotb" value="." onClick="calNo(dotb.value)">
+
+<input type="button" name="divb" value="/" onClick="calNo(divb.value)">
+
+<input type="button" class="green" value="=" onClick="displayResult.value=eval(displayResult.value)">
+
+</div>
+
+</div>
+
+</form>
+
+</div>
+
+<script>
+
+function calNo(result){
+
+form.displayResult.value=form.displayResult.value+result;
+
+}
+
+function myFunction() {
+
+document.getElementById("newcal").reset();
+
+}
+
+</script>
+
+
+<style>
+
+
+body, html {
+
+background: white;
+
+margin: 50px;
+
+padding:100%;
+
+}
+
+.container {
+
+position: fixed;
+
+top: 0%;
+
+left: 50%;
+
+transform: translate(-50%);
+
+background:grey;
+
+border-radius: 20px;
+
+padding-bottom: 20px;
+
+width: 320px;
+
+}
+
+.buttons {
+
+padding: 20px 20px20px;
+
+}
+
+.row {
+
+width: 280px;
+
+float:left;
+
+}
+
+input[type=button] {
+
+width: 60px;
+
+height: 50px;
+
+float: left;
+
+margin: 5px;
+
+box-sizing: border-box;
+
+background: #ecedef;
+
+border: none;
+
+font-size: 30px;
+
+line-height: 30px;
+
+border-radius: 50%;
+
+font-weight: 700;
+
+color: #5E5858;
+
+cursor: pointer;
+
+}
+  
+input[type=text] {
+
+width: 270px;
+
+height: 60px;
+
+float: left;
+
+padding: 0;
+
+box-sizing: border-box;
+
+text-align: right;
+
+font-weight: 700;
+
+font-size: 60px;
+
+line-height: 60px;
+
+margin:  25px;
+
+}
+
+
+</body>
+
+</html>
