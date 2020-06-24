@@ -1,0 +1,77 @@
+	<html>
+	  <head>
+	  </head>
+	  <body>
+		<h1>APPLICATION FORM</h1>
+		<script>
+		  function myfun(){
+		 
+		    var user =document.getElementById("user-name").value;
+			var password=document.getElementById("password").value;
+			var con=document.getElementById("confirm").value;
+			var mail=document.getElementById("email").value;
+			var mob=document.getElementById("mobile").value;
+		if (user==""){
+	   document.getElementById("Nofication").innerHTML="Please fill the Name";
+	    return false;
+		} 
+		 if (user.length<5){
+		   document.getElementById("Nofication").innerHTML="Name should be above 5";
+	       return false;       
+		 }
+			if (user.length>10){
+             document.getElementById("Nofication").innerHTML="Name should not be exist 10";
+		    return false;
+			}
+			if (password==""){
+			 document.getElementById("Pw").innerHTML="Please fill the password";
+			 return false;
+			}
+			if (password.length<8){
+			 document.getElementById("Pw").innerHTML="Password should minimum 8 character";
+			 return false;
+           }
+          if (con!=password){
+			 document.getElementById("moly").innerHTML="Password should be same";
+			 return false;
+           }
+        if (mail==""){
+		 document.getElementById("mail2").innerHTML="Please enter the mail id";
+		 return false;
+          }
+		if (mob=="+91"){
+		document.getElementById("mobile1").innerHTML="Please enter the mobile no";
+		return false;
+         }		
+		if (mob.length<10){
+		document.getElementById("mobile1").innerHTML="Mobile number must be 10 digit";
+		return false;
+         }		 
+		}
+		</script>  
+		  
+		<form onsubmit="return myfun()">
+	USER-NAME : <input type="text" id="user-name">
+		  <span id="Nofication"></span>
+		  <br></br>
+	PASSWORD : <input type="password" id="password">
+		<span id="Pw"></span>
+		<br></br>
+    CONFIRMPASSWORD : <input type="password" id="confirm">  
+         <span id="moly"></span>
+		 <br></br>
+    E-MAIL : <input type="text" id="email">
+	    <span id="mail2"></span> 
+		<br></br>
+	MOBILE NO: <input type="text" id="mobile"value="+91">
+        <span id="mobile1"></span>
+        <br></br>	
+		
+		  <button>submit</button>
+	</form> 
+		  
+		  
+		  
+		  
+	  </body>
+	  </html>
