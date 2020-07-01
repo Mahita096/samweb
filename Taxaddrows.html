@@ -1,0 +1,59 @@
+<html>
+<head>
+<title> Tax Calculator </title>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+<table id="table" border="4">
+  <tr>
+  <thead>
+     <th>Qty </th>
+	 <th>Price</th>
+	 <th>Tax </th>   
+	 <th>Amount</th>
+	 <th>Tax Amount</th>
+	 <th>Total Amount</th>
+	 </tr>
+	 </thead>
+	<tr>
+	   <td><input name="qty" class="form-control1" type="number"></td>
+       <td>  <input name="price" class="moly" type="number"></td> 
+		<td> <input name="tax" class="tifani" type="number"></td>
+		<td> <input name="amount" class="coco" type="text" readonly></td>
+		<td> <input name="taxamount" class="reshma" type="text" readonly></td>
+		<td> <input name="totalamount" class="shadow" type="text" readonly></td>
+		<td><input value="Add Row" class="add_cal"  type="button"></td>
+        <td> <input value="Calculate" class="cal_sum"  type="button"></td>
+		<td> <input value="Delete" class="remove_btn"  type="button"></td>
+	</tr>
+	</table>
+	
+	<script>
+	 $(document).ready(function(){
+     $(document).on('click','.cal_sum',function (){
+            var qty=$(this).closest('tr').find(".form-control1").val();
+            var price=$(this).closest('tr').find(".moly").val();
+            var tax=$(this).closest('tr').find(".tifani").val();
+            var amount=qty*price;
+            var taxamount=amount*(tax/100);
+            var totalamount=(amount+taxamount);
+            $(this).closest('tr').find(".coco").val(amount);
+            $(this).closest('tr').find(".reshma").val(taxamount);
+            $(this).closest('tr').find(".shadow").val(totalamount);
+			 });
+	 $(document).on('click','.add_cal',function(){
+	
+	var data='<tr><td><input name="qty" class="form-control1" type="number"></td><td> <input name="price" class="moly" type="number"></td><td><input name="tax" class="tifani" type="number"></td><td> <input name="amount" class="coco" type="text" readonly></td><td><input name="taxamount" class="reshma" type="text" readonly></td><td> <input name="totalamount" class="shadow" type="text" readonly></td><td><input value="Add Row" class="add_cal"  type="button"></td> <td> <input value="Calculate" class="cal_sum"  type="button"></td><td> <input value="Delete" class="remove_btn"  type="button"></td></tr>';
+	  $("#table").append(data);
+	  });
+	  
+	  $(document).on('click','.remove_btn',function (){
+	  $(this).closest('tr').remove();
+	  });
+	   });
+	    
+
+	</script>
+	
+	</body>
+	</html>
