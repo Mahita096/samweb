@@ -1,0 +1,34 @@
+<html>
+<head>
+
+  <title>Form Type</title>
+</head>
+<body>
+ <table>
+   <tr>
+     
+<td class="txt" ><b>Form Type</b></td>
+     <td><select id="sel" style="padding:5px 5px">
+    <option value="0">select</option>
+    <option value="1">User</option>
+  <option value="2">Employee</option></td>
+</select>
+   </tr>
+  <tr>
+    <td class="txt" > <b>Name</b></td>
+    <td><input id="name" type="textbox" style="padding:5px 5px"> </td>
+    <td class="txt" > <b>Password</b></td>
+    <td><input id="pass" type="textbox" disabled="true"/ style="padding:5px 5px"></td>
+ 
+  <script>
+    document.getElementById('sel').addEventListener('change', function() {
+    if (this.value ==1 ) {
+        document.getElementById('pass').disabled = false;
+    } else {
+        document.getElementById('pass').disabled = true;
+    }
+});
+  </script>
+    
+</body>
+</html>
