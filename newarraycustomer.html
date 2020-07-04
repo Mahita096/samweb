@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>Customer</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<body>
+
+<center><font size=6><b>Customer Details</b></center></td>
+</body>
+<table>
+	 <tr>
+	 <th><center><font size=5>Customer Name </center></th>
+	 
+     
+     <td><input type="text" id="num" name="no" value="" placeholder= "Please Enter The Name" style="padding:5px 15px" />
+	 <td><input type="button" value="Submit" onclick="findOddEven()" name="find"> </td>
+            <td id="result"></td>
+	  
+	 </tr>
+</table>
+<p id="cus"</p>
+<p id="srt"</p>
+<p id="mid"</p>
+<p id="del"</p>
+  
+  
+<script>
+ function findOddEven(){
+ var cusnam = document.getElementById("num").value;
+ var ar = cusnam.split(",");
+ var cx ='' ;
+   for(i=0;i<ar.length;i++)
+    {
+
+      cx+=cusnam.split(",")[i]+'<br>';
+   var st = ar.sort();
+    var md= ar[ar.length/2|0];
+var mid = ar
+mid =mid.filter(item => item !== md);
+     
+ document.getElementById("cus").innerHTML = cx;
+ document.getElementById("srt").innerHTML = ar.sort();
+  
+      document.getElementById("mid").innerHTML = md;
+      document.getElementById("del").innerHTML = (mid);
+    
+          }
+	
+ var nr = document.getElementById('num').value;
+ if ( ar.length % 2 == 0) {
+                    document.getElementById('result').innerHTML = ar.length + ' is an Even number';
+					{
+					alert("Even Number");
+					}
+                }else{
+                    document.getElementById('result').innerHTML = ar.length + ' is an Odd number';
+                }
+				alert("Odd Number");
+				
+			}
+  
+           
+
+
+
+</script>
+ </html>
+</head>
